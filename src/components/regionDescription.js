@@ -1,34 +1,47 @@
 import styled from "styled-components";
 
-const RegionDescription = ({ data }) => {
+const RegionDescription = ({ region }) => {
+  //props data da CovidDataResult
+  const {
+    denominazione_regione,
+    ingressi_terapia_intensiva,
+    nuovi_positivi,
+    isolamento_domiciliare,
+    ricoverati_con_sintomi,
+    totale_positivi,
+    deceduti,
+    data,
+  } = region;
+
   return (
     <Container>
       <h3>Clicca su una Regione per gli aggiornamenti sul Covid19</h3>
-      <Title>{data.denominazione_regione}</Title>
+      <h4>{data.slice(0, 10)}</h4>
+      <Title>{denominazione_regione}</Title>
       <ContainerData>
         <ItemContainer>
           <DescriptionData>Terapia Intensiva</DescriptionData>
-          <NumberData>+{data.ingressi_terapia_intensiva}</NumberData>
+          <NumberData>+{ingressi_terapia_intensiva}</NumberData>
         </ItemContainer>
         <ItemContainer>
           <DescriptionData>Nuovi Positivi</DescriptionData>
-          <NumberData>+{data.nuovi_positivi}</NumberData>
+          <NumberData>+{nuovi_positivi}</NumberData>
         </ItemContainer>
         <ItemContainer>
           <DescriptionData>Ricoverati</DescriptionData>
-          <NumberData>{data.ricoverati_con_sintomi}</NumberData>
+          <NumberData>{ricoverati_con_sintomi}</NumberData>
         </ItemContainer>
         <ItemContainer>
           <DescriptionData>Isolamento Domiciliare</DescriptionData>
-          <NumberData>{data.isolamento_domiciliare}</NumberData>
+          <NumberData>{isolamento_domiciliare}</NumberData>
         </ItemContainer>
         <ItemContainer>
           <DescriptionData>Totale Positivi</DescriptionData>
-          <NumberData>{data.totale_positivi}</NumberData>
+          <NumberData>{totale_positivi}</NumberData>
         </ItemContainer>
         <ItemContainer>
           <DescriptionData>Deceduti</DescriptionData>
-          <NumberData>{data.deceduti}</NumberData>
+          <NumberData>{deceduti}</NumberData>
         </ItemContainer>
       </ContainerData>
     </Container>
@@ -42,7 +55,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 400px;
+  height: 500px;
   background-color: white;
   border-radius: 5px;
   padding: 10px;
@@ -52,11 +65,11 @@ const Container = styled.div`
     height: auto;
   }
   @media (min-width: 641px) {
-    width: 360px;
+    width: 390px;
   }
   @media (min-width: 961px) {
     width: 500px;
-    height: 600px;
+    height: 650px;
   }
 `;
 const ContainerData = styled.div`

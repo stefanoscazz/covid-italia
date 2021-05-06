@@ -5,12 +5,17 @@ import Home from "./pages/Home";
 
 function App() {
   return (
-    <div className="App">
+    <AppContainer className="App">
       <Home />
-    </div>
+    </AppContainer>
   );
 }
 
 export default App;
 
 // Style
+
+const AppContainer = styled.div`
+ background: linear-gradient(217deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
+`

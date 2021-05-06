@@ -29,7 +29,7 @@ const CovidDataResult = () => {
         el.denominazione_regione.includes(region)
       );
       if (filtrato[0] !== undefined) {
-        return <RegionDescription data={filtrato[0]} />;
+        return <RegionDescription region={filtrato[0]} />;
       }
     }
     if (status === "failed") {

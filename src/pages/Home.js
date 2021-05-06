@@ -46,7 +46,7 @@ const Home = () => {
 export default Home;
 
 const Container = styled.div`
-  background: linear-gradient(217deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  min-height: calc(100vh - 200px);
   display: flex;
   align-items: center;
   justify-content: center;
