@@ -3,7 +3,6 @@ import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import MapItaly from "../components/MapItaly";
 import styled from "styled-components";
-import MuiAlert from "@material-ui/lab/Alert";
 import "./style.css";
 import { useEffect, useState } from "react";
 import { Snackbar } from "@material-ui/core";
@@ -34,7 +33,7 @@ const Home = () => {
           onClose={handleClose}
         >
           <Alert onClose={handleClose} severity="info">
-            Benvenuto
+            Benvenuto/a
           </Alert>
         </Snackbar>
       </Container>

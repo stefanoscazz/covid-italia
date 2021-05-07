@@ -16,7 +16,7 @@ const RegionDescription = ({ region }) => {
   return (
     <Container>
       <h3>Clicca su una Regione per gli aggiornamenti sul Covid19</h3>
-      <h4>{data.slice(0, 10)}</h4>
+      <h3>{data.slice(0, 10)}</h3>
       <Title>{denominazione_regione}</Title>
       <ContainerData>
         <ItemContainer>

@@ -1,16 +1,11 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { addRegion } from "../slice/regionSlice";
 import { dataAction } from "../slice/dataSlice";
 import ReactTooltip from "react-tooltip";
 import uuid from "react-uuid";
-const deleteFocus = (action) => {
-  window &&
-    window.addEventListener("focus", (e) => {
-      action();
-    });
-};
+
 const MapItaly = () => {
   const dispatch = useDispatch();
   const status = useSelector((state) => state.data.status);

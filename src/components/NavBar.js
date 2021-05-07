@@ -5,8 +5,7 @@ const Navbar = () => {
     <div>
       <NavBarContainer>
         <h1>
-          <span style={{ color: "green" }}>Covid</span>Ita
-          <span style={{ color: "red" }}>lia</span>
+          Covid<span style={{ color: "#2c4150" }}>Italia</span>
         </h1>
       </NavBarContainer>
     </div>
@@ -18,8 +17,6 @@ export default Navbar;
 const NavBarContainer = styled.div`
   background-color: #648dae;
   color: white;
-  height: 100px;
+  height: 80px;
   padding: 10px;
-  display: flex;
-  align-items: center;
 `;

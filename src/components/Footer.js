@@ -6,10 +6,19 @@ const Footer = () => {
   return (
     <FooterContainer>
       <div style={{ margin: "10px" }}>
-        <p> CONTATTAMI </p>
+        <p> Realizzato da Stefano Scazzi seguimi su </p>
       </div>
-      <GitHub style={{ fontSize: "35px" }} />
-      <LinkedIn style={{ fontSize: "40px" }} />
+      <Social>
+        <a href="https://www.linkedin.com/in/stefano-scazzi-7a9185156/">
+          {" "}
+          <LinkedIn style={{ fontSize: "40px", color: "white" }} />
+        </a>
+        <a href="https://github.com/stefanoscazz">
+          <GitHub
+            style={{ fontSize: "35px", marginRight: "6px", color: "white" }}
+          />
+        </a>
+      </Social>
     </FooterContainer>
   );
 };
@@ -23,4 +32,13 @@ const FooterContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+`;
+const Social = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    margin: 7px;
+  }
 `;

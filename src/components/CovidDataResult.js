@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import styled from "styled-components";
 import RegionDescription from "./regionDescription";
+import { CircularProgress } from "@material-ui/core";
 
 const CovidDataResult = () => {
   //State Redux
@@ -12,15 +13,20 @@ const CovidDataResult = () => {
     if (!list && !status) {
       return (
         <Container>
-          <h3>Clicca su una Regione per gli aggiornamenti sul Covid19</h3>
+          <h3>
+            Clicca su una Regione per gli aggiornamenti giornalieri sul Covid19
+          </h3>
         </Container>
       );
     }
     if (status === "loading") {
       return (
         <Container>
-          <h3>Clicca su una Regione per gli aggiornamenti sul Covid19</h3>
+          <h3>
+            Clicca su una Regione per gli aggiornamenti giornalieri sul Covid19
+          </h3>
           <h1>Loading</h1>
+          <CircularProgress />
         </Container>
       );
     }
@@ -35,8 +41,12 @@ const CovidDataResult = () => {
     if (status === "failed") {
       return (
         <Container>
-          <h3>Clicca su una Regione per gli aggiornamenti sul Covid19</h3>
-          <p>Errore connessione Internet, connettiti e riprova</p>
+          <h3>
+            Clicca su una Regione per gli aggiornamenti giornalieri sul Covid19
+          </h3>
+          <p style={{ color: "#963f3f", fontWeight: "bold", fontSize: "20px" }}>
+            Errore connessione Internet, connettiti e riprova
+          </p>
         </Container>
       );
     }
