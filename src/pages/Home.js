@@ -33,7 +33,7 @@ const Home = () => {
           onClose={handleClose}
         >
           <Alert onClose={handleClose} severity="info">
-            Benvenuto/a
+            Benvenuto/a clicca su una regione
           </Alert>
         </Snackbar>
       </Container>
